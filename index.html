@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Magic the Gathering RPG Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Magic RPG Game</title>
 </head>
-<body>
+<body style="font-family: Metamorphous">
 
-    <section class="container">
+	<section class="container">
         <h1 id="mainTitle">Magic the Gathering RPG Game</h1>
-    </section>
-    <section class="container restart">
-        <section class="row">
-            <section id="characters">
-                <section class="title">Pick your Character</section>
-                    <!-- Hover sound effect -->
-                    <audio id="hover" src="assets/images/hover.flac"></audio>
-            </section>
-        </section>
-    </section>
+        <script>
+            function play(){
+                 var audio = document.getElementById("audio");
+                 audio.play();
+                           }
+             </script>
+          <section id="playBtn" class="row">
+          <input class="pBtn" type="button" value="PLAY"  onclick="play()">
+          <audio id="audio" src="assets/images/mtgtheme.mp3" ></audio> 
+          </section> 
+	</section>
+	<section class="container restart">
+		<section class="row">
+		 <section id="characters">
+		 	<section class='title'>Pick your Character</div>
+                 <!-- HOVER SOUND EFFECT -->
+                <audio id="hoverSound" src="assets/images/hover.flac" allow="autoplay"></audio>
+			</section>
+		</section>
+	</section>
 
-    <!-- Your Character and Enemy -->
-        <section class="container">
-            <section class="row">
-                <section class='col-md-5' id="yourCharacter"></section>
-                <section class='col-md-2' id="fightButton"></section>
-                <section class='col-md-5' id="currentEnemy"></section>
-            </section>
-        </section>
+	<!-- your character and enemy -->
+	<section class='container'>
+		<section class='row'>
+			<section class='col-md-5' id="yourCharacter"></section>
+			<section class='col-md-2' id="fightButton"></section>
+			<section class='col-md-5' id="currentEnemy"></section>
+		</section>
+	</section>
 
-     <!-- Remaining enemies-->
-        <section class="container">
-            <section class="row">
-                <section id='remainingEnemies'></section>
-            </section>
-        </section>
+	<!-- remaining enemies  -->
+	<section class='container'>
+		<section class='row'>
+			<section id='remainingEnemies'></section>
+		</section>
+	</section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
-    <script src="assets/javascript/game.js"></script>
-    <script src="assets/javascript/effects.js"></script>
-    
-    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+  <script src="assets/javascript/game.js"></script>
+  <script src="assets/javascript/effects.js"></script>
+
+
 </body>
 </html>

@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-var $hoverSound = $("#hover");
-
-    $(".character > .image").on('mouseenter', function() {
-        $hoverSound.get(0).play();
+    var $hoverSound = $("#hoverSound");
+    
+        $(".character > .image").on('mouseenter', function() {
+            $hoverSound.get(0).play();
+        });
+    
+        $(".character > .image").on('mouseout', function() {
+            $hoverSound.get(0).pause();
+            $hoverSound.get(0).currentTime = 0;
+        });
+    
     });
-
-    $(".character > .image").on('mouseout', function() {
-        $hoverSound.get(0).pause();
-        $hoverSound.get(0).currentTime = 0;
-    });
-
-});
