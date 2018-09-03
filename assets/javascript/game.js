@@ -216,24 +216,11 @@ $(document).ready(function() {
 			console.log("YOUR HEALTH: ",yourHealth);
 
 
-			$('.currentEnemy > .characterHealth').html(currentEnemyHealth).animate({
-				fontSize: 60,
-				color: '#FF0000'
-			}, 300, function() {
-				$(this).animate({
-					fontSize: 20,
-					color: 'white'
-				}, 300);
-			});
-			$('.yourCharacter > .characterHealth').html(yourHealth).animate({
-				fontSize: 60,
-				color: '#FF0000'
-			}, 300, function() {
-				$(this).animate({
-					fontSize: 20,
-					color: 'white'
-				}, 300);
-			});
+			$('.currentEnemy > .characterHealth').html(currentEnemyHealth);
+				
+			
+			$('.yourCharacter > .characterHealth').html(yourHealth);
+				
 
 			if (currentEnemyHealth <= 0 && yourHealth > 0) {
 
@@ -271,32 +258,6 @@ $(document).ready(function() {
 	}
 
 
-
-			// 	$(document).on('click', '#fightButton', function() {
-			// 		counter++;
-			// 		console.log("CLICKED ATTACK");
-			// 		fight();
-			// 	});
-			// }
-
-			// else if (yourHealth <= 0 && currentEnemyHealth > 0) {
-			// 	console.log("You lost");
-			// 	$('#remainingEnemies').empty();
-			// 	$('#remainingEnemies').append('<div class="title">You Lost</div>');
-			// 	$('#remainingEnemies').append('<button class="btn btn-default btn-lg">RESTART');
-
-			// }
-
-			// else if (yourHealth > 0 && currentEnemyHealth <= 0) {
-			// 	console.log('Enemy defeated');
-			// 	$('#currentEnemy').empty();
-
-			// 	pickYourOpponent();
-
-			// }
-
-		// }
-
 // =========================================================
 
 
@@ -306,6 +267,5 @@ $(document).ready(function() {
 
 }); // CLOSING BRACKET FOR DOCUMENT LOAD
 
-// NEW OBJECTIVE, NOTHING SHOULD WORK UNLESS THE NEW ENEMY IS SELECTED. CREATE A BOOLEAN THAT HAS TO BE TRUE IN ORDER TO CONTINUE THE GAME
 
 
